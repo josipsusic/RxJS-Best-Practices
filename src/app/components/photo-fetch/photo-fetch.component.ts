@@ -7,13 +7,19 @@ import { PhotosService } from 'src/app/services/photos.service';
   styleUrls: ['./photo-fetch.component.scss'],
 })
 export class PhotoFetchComponent implements OnInit {
+  imageUrl: string;
+
   constructor(private photoService: PhotosService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAPhotoFromService();
+  }
 
   getAPhotoFromService() {
     this.photoService.getRandomImage().subscribe((image) => {
-      console.log(image.urls.regular);
+      this.imageUrl = image.urls.regular;
+
+      console.log('Image URL', this.imageUrl);
     });
   }
 }
