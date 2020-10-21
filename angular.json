@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "RxJS-best-practices"
+    }
+  },
+  "defaultProject": "RxJS-best-practices",
+  "cli": {
+    "analytics": "910a9f20-1088-4b9c-ac64-1df4ea4ff8bb"
+  }
 }
